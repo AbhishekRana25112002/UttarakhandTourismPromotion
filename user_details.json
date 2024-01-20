@@ -1,0 +1,26 @@
+{
+    "ranaabhishek25112002@gmail.com": {
+        "number": 1,
+        "name": "Abhishek Rana",
+        "state": "Uttarakhand",
+        "email": "ranaabhishek25112002@gmail.com",
+        "password": "helloworld",
+        "about": "I am the owner of this website"
+    },
+    "rishab@gmail.com": {
+        "number": 2,
+        "name": "Rishabh Bhandari",
+        "state": "Bihar",
+        "password": "hashtag",
+        "email": "rishab@gmail.com",
+        "about": "I am a Btech student of Graphic Era Hill University."
+    },
+    "ashishsingh32@gmail.com": {
+        "number": 4,
+        "name": "Ashish Singh Panwar",
+        "state": "Rajasthan",
+        "password": "footballrocks",
+        "email": "ashishsingh32@gmail.com",
+        "about": "I am an aspiring software engineer."
+    }
+}

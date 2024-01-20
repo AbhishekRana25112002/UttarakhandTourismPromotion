@@ -1,0 +1,94 @@
+{% include 'top.html' %}
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-transparent" >
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <div class="logo">
+<!--        <h1 class="text-light"><a href="{{url_for('message')}}"><span>Uttarakhand</span></a></h1>-->
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto {{home}}" href="{{url_for('home')}}">Home</a></li>
+          <li><a class="nav-link scrollto {{read}} "href="{{url_for('read_blog',index=i)}}">Read Blogs</a></li>
+          <li><a class="nav-link scrollto  {{write}}" href="{{url_for('add_blog')}}">Write</a></li>
+          <li><a class="nav-link scrollto {{know}}" href="{{url_for('about')}}">Know UK</a></li>
+          <li><a class="nav-link scrollto {{contact}}" href="{{url_for('contact')}}">Contact us</a></li>
+
+
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+  <!-- ======= Hero Section ======= -->
+  <section id="hero">
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Write your own blog</h1>
+      <h2>To share your knowlege about Uttarakhand, write your blog below</h2>
+      <a href="#contact" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section><!-- End Hero -->
+  <br><br><br>
+  <br>
+<!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Your Blog</h2>
+<!--          <p>Fill in all the fields.</p>-->
+        </div>
+
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+<!--            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.761432334949!2d77.99881481428197!3d30.272377914725524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092bca3fc0ccf3%3A0xd19900de8c24dbee!2sGraphic%20Era%20Hill%20University!5e0!3m2!1sen!2sin!4v1669313771931!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>-->
+          <img src="https://media.istockphoto.com/id/887987150/photo/blogging-woman-reading-blog.jpg?s=612x612&w=0&k=20&c=7SScR_Y4n7U3k5kBviYm3VwEmW4vmbngDUa0we429GA=" style="border:0; width: 100%; height: 384px;">
+          </div>
+
+          <div class="col-lg-6">
+            <form action="{{url_for('add_blog')}}" method="post" role="form" class="">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="text" class="form-control" name="title" id="email" placeholder="Title of your blog" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="img" id="subject" placeholder="Url of an image related to the blog" required>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="about" id="subject1" placeholder="About You" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="blog" rows="10" cols="10" placeholder="Blog Content" required></textarea>
+              </div>
+              <br>
+              <div class="text-center"><button type="submit" class="btn btn-success">Post Blog</button></div>
+            </form>
+<!--              <div class="my-3">-->
+<!--                <div class="loading">Loading</div>-->
+<!--                <div class="error-message"></div>-->
+<!--                <div class="sent-message">Your message has been sent. Thank you!</div>-->
+<!--              </div>-->
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+{% include 'footer.html' %}
+
+  {% include 'bottom.html' %}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Read Blog</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+<!--  <link href="static/assets2/img/favicon.png" rel="icon">-->
+<!--  <link href="static/assets2/img/apple-touch-icon.png" rel="apple-touch-icon">-->
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+<!--  <link href="static/assets2/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+<!--  <link href="static/assets2/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">-->
+<!--  <link href="static/assets2/vendor/aos/aos.css" rel="stylesheet">-->
+<!--  <link href="static/assets2/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">-->
+<!--  <link href="static/assets2/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">-->
+<!--<link href="static/assets/vendor/aos/aos.css" rel="stylesheet">-->
+<!--  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="static/assets/css/style.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets2/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+
+</head>
+
+<body>
+
+{% include 'header.html' %}
+  <!-- ======= Header ======= -->
+<!--  <header id="header" class=" ">-->
+<!--    <div class="container d-flex align-items-center justify-content-between">-->
+
+<!--      <div class="logo">-->
+<!--&lt;!&ndash;        <h1 class="text-light"><a href="{{url_for('message')}}"><span>Uttarakhand</span></a></h1>&ndash;&gt;-->
+<!--        &lt;!&ndash; Uncomment below if you prefer to use an image logo &ndash;&gt;-->
+<!--        &lt;!&ndash; <a href="index.html"><img src="static/assets/img/logo.png" alt="" class="img-fluid"></a>&ndash;&gt;-->
+<!--      </div>-->
+
+<!--      <nav id="navbar" class="navbar">-->
+<!--        <ul>-->
+<!--          <li><a class="nav-link scrollto" href="{{url_for('home')}}">Home</a></li>-->
+<!--          <li><a class="nav-link scrollto active" href="{{url_for('read_blog',index=i)}}">Read Blogs</a></li>-->
+<!--          <li><a class="nav-link scrollto" href="{{url_for('add_blog')}}">Write</a></li>-->
+<!--          <li><a class="nav-link scrollto" href="{{url_for('about')}}">Know UK</a></li>-->
+<!--          <li><a class="nav-link scrollto" href="{{url_for('contact')}}">Contact us</a></li>-->
+
+
+<!--        </ul>-->
+<!--        <i class="bi bi-list mobile-nav-toggle"></i>-->
+<!--      </nav>&lt;!&ndash; .navbar &ndash;&gt;-->
+
+<!--    </div>-->
+<!--  </header>&lt;!&ndash; End Header &ndash;&gt;-->
+
+
+
+
+  <main id="main">
+
+
+    <div style="text-align:center; font-family: Arial, sans-serif;">
+      <h1>Popular Blogs</h1>
+    </div>
+    <!-- ======= Blog Details Section ======= -->
+    <section id="blog" class="blog">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row g-5">
+
+          <div class="col-lg-8">
+
+            <article class="blog-details">
+
+              <div class="post-img">
+
+                <img src="{{data['img-url']}}" alt="" class="img-fluid" style="width:100%">
+              </div>
+
+              <h2 class="title">{{data['blog-title']}}</h2>
+
+              <div class="meta-top">
+                <ul>
+                  <li class="d-flex align-items-center"><i class="bi bi-person"></i> <a href="blog-details.html">{{data['author']}}</a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-clock"></i> <a href="blog-details.html"><time datetime="2020-01-01">{{data['date']}}</time></a></li>
+                  <li class="d-flex align-items-center"><i class="bi bi-chat-dots"></i> <a href="blog-details.html"></a>Comments</li>
+                </ul>
+              </div><!-- End meta top -->
+
+              <div class="content">
+                <p class="px-30">
+                {{data['blog']}}
+                </p>
+
+
+              </div>
+
+            </article><!-- End blog post -->
+
+            <div class="post-author d-flex align-items-center">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUW0u5Eiiy3oM6wcpeEE6sXCzlh8G-tX1_Iw&usqp=CAU" class="rounded-circle flex-shrink-0" alt="">
+              <div>
+                <h4>{{data['author']}}</h4>
+                <p>
+                  <br>
+                  {{data['about-author']}}
+                </p>
+              </div>
+            </div><!-- End post author -->
+
+            <div class="comments">
+
+              <h4 class="comments-count">Comments</h4>
+              {% for comment in data['comments'] %}
+              <div id="comment-1" class="comment">
+                <div class="d-flex">
+                  <div class="comment-img"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTdmrjoiXGVFEcd1cX9Arb1itXTr2u8EKNpw&usqp=CAU" alt=""></div>
+                  <div>
+                    <h5><a href="">{{comment}}</a></h5>
+<!--                    <time datetime="2020-01-01">{{date}}</time>-->
+                    <p>
+                      {{data['comments'][comment]}}
+                    </p>
+                  </div>
+                </div>
+              </div><!-- End comment #1 -->
+              {% endfor %}
+
+
+
+              <div class="reply-form">
+
+                <h4>Add a comment</h4>
+                <p>Your email address will not be published. Required fields are marked * </p>
+                <form action="{{url_for('read_blog', index=data['number'])}}" method="post">
+                  <div class="row">
+                    <div class="col-md-6 form-group">
+                      <input name="name" type="text" class="form-control" placeholder="Your Name*">
+                    </div>
+                    <div class="col-md-6 form-group">
+                      <input name="email" type="text" class="form-control" placeholder="Your Email*">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <input name="profession" type="text" class="form-control" placeholder="Your Profession">
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col form-group">
+                      <textarea name="comment" class="form-control" placeholder="Your Comment*"></textarea>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Post Comment</button>
+
+                </form>
+
+              </div>
+
+            </div><!-- End blog comments -->
+
+          </div>
+
+          <div class="col-lg-4">
+
+            <div class="sidebar">
+
+
+
+              <div class="sidebar-item recent-posts">
+                <h3 class="sidebar-title">All Posts</h3>
+                {% for blog in alldata %}
+                <div class="mt-3" style="margin-top: 2rem!important;">
+
+                  <div class="post-item mt-3">
+                    <img src="{{alldata[blog]['img-url']}}" alt="" style="height:50px">
+                    <div>
+                      <h4><a href="{{url_for('read_blog',index=alldata[blog]['number'])}}">{{alldata[blog]['blog-title']}}</a></h4>
+                      <time datetime="2020-01-01">{{alldata[blog]['date']}}</time>
+                    </div>
+                  </div><!-- End recent post item-->
+
+
+
+                </div>
+                {% endfor %}
+
+              </div><!-- End sidebar recent posts-->
+
+
+
+            </div><!-- End Blog Sidebar -->
+
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Blog Details Section -->
+
+  </main><!-- End #main -->
+
+
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+<!--  <script src="static/assets2/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>-->
+<!--  <script src="static/assets2/vendor/aos/aos.js"></script>-->
+<!--  <script src="static/assets2/vendor/glightbox/js/glightbox.min.js"></script>-->
+<!--  <script src="static/assets2/vendor/purecounter/purecounter_vanilla.js"></script>-->
+<!--  <script src="static/assets2/vendor/swiper/swiper-bundle.min.js"></script>-->
+<!--  <script src="static/assets2/vendor/isotope-layout/isotope.pkgd.min.js"></script>-->
+<!--  <script src="static/assets2/vendor/php-email-form/validate.js"></script>-->
+  {% include 'footer.html' %}
+  <!-- Template Main JS File -->
+  <script src="static/assets2/js/main.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

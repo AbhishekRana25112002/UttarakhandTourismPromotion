@@ -1,0 +1,161 @@
+{% include 'top.html' %}
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" >
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Read about Uttarakhand</h1>
+      <h2>{{quote}}</h2>
+      <a href="#services" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    <br><br>
+    </div>
+  </section><!-- End Hero -->
+
+<!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <br><br><br><br>
+          <h2>Brief Introduction</h2>
+          <p>Uttarakhand was formed on 9th November 2000 as the 27th State of India, when it was carved out of northern Uttar Pradesh. Located at the foothills of the Himalayan mountain ranges, it is largely a hilly State, having international boundaries with China (Tibet) in the north and Nepal in the east. On its north-west lies Himachal Pradesh, while on the south is Uttar Pradesh. It is rich in natural resources especially water and forests with many glaciers, rivers, dense forests and snow-clad mountain peaks. Char-dhams, the four most sacred and revered Hindu temples of Badrinath,Kedarnath, Gangotri and Yamunotri are nestled in the mighty mountains</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up">
+              <div class="icon"><i class="bx bxl-dribbble"></i></div>
+              <h4 class="title"><a href="">Facts and Figures</a></h4>
+              <p class="description">Area:53,483 sq.km.
+                Population: 100.86 lakh
+                Capital: Dehradun
+                <br>
+                Districts: 13
+                <br>
+                Literacy Rate: 78.80%
+                <br>
+                Latitude: 28°43' N to 31°27' N
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+              <div class="icon"><i class="bx bx-file"></i></div>
+              <h4 class="title"><a href="">Religious Distribution</a></h4>
+              <p class="description">More than four-fifths of Uttarakhand's residents are Hindus, Muslims, Sikhs, Christians, Buddhists, and Jains make up the remaining population, with the Muslims being the largest minority.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+              <div class="icon"><i class="bx bx-tachometer"></i></div>
+              <h4 class="title"><a href="">Languages</a></h4>
+              <p class="description">The most common language spoken is Hindi, followed by Garhwali, Kumaoni, Jaunsari and English.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+            <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+              <div class="icon"><i class="bx bx-world"></i></div>
+              <h4 class="title"><a href="">Geography</a></h4>
+              <p class="description">Uttarakhand has a total area of 53,566 km2 (20,682 sq mi), of which 86% is mountainous and 65% is covered by forest. Most of the northern part of the state is covered by high Himalayan peaks and glaciers.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+
+
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Famous Personalities from Utttarakhand</h2>
+          <p>Meet these famous people from Uttarakhand who have made their names across the world through their hardwork and dedication. ALl of them love their states and encourage everyone to visit it aleast once in their lives.</p>
+        </div>
+
+        <div class="row">
+          {% for name in data2 %}
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up">
+              <div class="pic"><img src="{{data2[name]['img_url']}}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>{{name}}</h4>
+                <span>{{data2[name]['about']}}</span>
+<!--                <div class="social">-->
+<!--                  <a href=""><i class="bi bi-twitter"></i></a>-->
+<!--                  <a href=""><i class="bi bi-facebook"></i></a>-->
+<!--                  <a href=""><i class="bi bi-instagram"></i></a>-->
+<!--                  <a href=""><i class="bi bi-linkedin"></i></a>-->
+<!--                </div>-->
+              </div>
+            </div>
+
+          </div>
+          {% endfor %}
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="member" data-aos="fade-up" data-aos-delay="150">-->
+<!--              <div class="pic"><img src="https://pbs.twimg.com/media/FdAqN0LaAAAOg_r.jpg" class="img-fluid" alt=""></div>-->
+<!--              <div class="member-info">-->
+<!--                <h4>Rishabh Pant</h4>-->
+<!--                <span>Indian Cricketer</span>-->
+<!--                <div class="social">-->
+<!--                  <a href=""><i class="bi bi-twitter"></i></a>-->
+<!--                  <a href=""><i class="bi bi-facebook"></i></a>-->
+<!--                  <a href=""><i class="bi bi-instagram"></i></a>-->
+<!--                  <a href=""><i class="bi bi-linkedin"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="member" data-aos="fade-up" data-aos-delay="300">-->
+<!--              <div class="pic"><img src="https://m.photos.timesofindia.com/thumb.cms?msid=3350942&width=500&resizemode=4" class="img-fluid" alt=""></div>-->
+<!--              <div class="member-info">-->
+<!--                <h4>Abhinav Bindra</h4>-->
+<!--                <span>Athlete</span>-->
+<!--                <div class="social">-->
+<!--                  <a href=""><i class="bi bi-twitter"></i></a>-->
+<!--                  <a href=""><i class="bi bi-facebook"></i></a>-->
+<!--                  <a href=""><i class="bi bi-instagram"></i></a>-->
+<!--                  <a href=""><i class="bi bi-linkedin"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+
+<!--          <div class="col-lg-4 col-md-6">-->
+<!--            <div class="member" data-aos="fade-up" data-aos-delay="150">-->
+<!--              <div class="pic"><img src="https://pbs.twimg.com/media/FdAqN0LaAAAOg_r.jpg" class="img-fluid" alt=""></div>-->
+<!--              <div class="member-info">-->
+<!--                <h4>Rishabh Pant</h4>-->
+<!--                <span>Indian Cricketer</span>-->
+<!--                <div class="social">-->
+<!--                  <a href=""><i class="bi bi-twitter"></i></a>-->
+<!--                  <a href=""><i class="bi bi-facebook"></i></a>-->
+<!--                  <a href=""><i class="bi bi-instagram"></i></a>-->
+<!--                  <a href=""><i class="bi bi-linkedin"></i></a>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+
+  {% include 'footer.html' %}
+  {% include 'bottom.html' %}
+

@@ -1,0 +1,57 @@
+{% include 'top.html' %}
+<body>
+  {% include 'header.html' %}
+
+  <section id="hero" >
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Add images</h1>
+      <h2>If you want to add your favourite images to our website, fill in the below form.</h2>
+      <a href="#about" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+    </div>
+  </section>
+  <br><br><br><br><br>
+  <div id="about" class="container fw-semibold">
+            <br><br>
+         <form  action="{{url_for('add_images')}}" method="post" class="row g-3">
+            <div class="col-md-6">
+              <label for="inputEmail4" class="form-label">Name</label>
+              <input type="name" class="form-control" id="inputEmail4" name="name">
+            </div>
+            <div class="col-md-6">
+              <label for="inputPassword4" class="form-label">Email</label>
+              <input type="email" class="form-control" id="inputPassword4" name="email">
+            </div>
+            <div class="col-12">
+              <label for="inputAddress" class="form-label">Image URL * </label>
+              <input type="text" class="form-control" id="inputAddress" name="url" placeholder="Copy image address here" required>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Image Link</label>
+              <input type="text" class="form-control" id="inputAddress2" name="link" placeholder="Copy the link to a site here">
+            </div>
+            <div class="col-md-6">
+              <label for="inputCity" class="form-label">Image name</label>
+              <input type="text" class="form-control" name='img_name' placeholder="name your image" id="inputCity" required>
+            </div>
+            <div class="col-md-4">
+              <label for="inputState" class="form-label">Category</label>
+              <select id="inputState" class="form-select" name="category">
+                <option selected>Others</option>
+                  <option>Temples</option>
+                  <option>AdventureSports</option>
+                  <option>TouristPlaces</option>
+
+              </select>
+            </div>
+
+            <div class="col-12">
+              <button type="submit" class="btn btn-primary">Contribute Image</button>
+            </div>
+         </form>
+  </div>
+  <br><br><br><br><br>
+  {% include 'footer.html' %}
+
+
+
+{% include 'bottom.html' %}

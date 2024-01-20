@@ -1,0 +1,234 @@
+
+{% include 'top.html' %}
+
+<body>
+
+  {% include 'header.html' %}
+
+  <!-- ======= Top Section ======= -->
+  <section id="hero" >
+    <div class="hero-container" data-aos="fade-up">
+      <h1>Welcome to Uttarakhand</h1>
+      <h2>{{quote}}</h2>
+      <a href="#team" class="btn-get-started scrollto"><i class="bx bx-chevrons-down"></i></a>
+
+    </div>
+  </section><!-- End Top -->
+
+  <main id="main">
+
+
+    <!-- ======= Blog Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Popular Blogs</h2>
+<!--          <p>Meet these famous people from Uttarakhand who have made their names across the world through their hardwork and dedication. ALl of them love their states and encourage everyone to visit it aleast once in their lives.</p>-->
+        </div>
+
+        <div class="row">
+          {% for title in blogs %}
+          {% if blogs[title]['number']<7 %}
+          <div class="col-lg-4 col-md-6">
+            <div class="member" data-aos="fade-up" >
+              <div class="pic" ><a href="{{url_for('read_blog',index=blogs[title]['number'])}}"><img src="{{blogs[title]['img-url']}}"  class="img-fluid" alt="" style="height: 300px;"></a></div>
+              <div class="member-info">
+                <h4>{{title}}</h4>
+                <span>{{blogs[title]['author']}}</span>
+              </div>
+            </div>
+
+          </div>
+          {% endif %}
+          {% endfor %}
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Blog Section -->
+
+      <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+      <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <br><br>
+          <h2>Recommended Video</h2>
+          <p align="center"><br><br><iframe width="700" height="400" src="{{video}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+        </div>
+        <br><br><br>
+        <div class="row no-gutters">
+          <div class="content col-xl-5 d-flex align-items-stretch" data-aos="fade-up">
+            <div class="content">
+              <h3>Make Beautiful Memories</h3>
+              <p>
+                Come here and you will gain an experience never before. Have fun in nature's lap and find incredible joy.
+              </p>
+              <a href="https://uttarakhandtourism.gov.in/" class="about-btn">See Official Site <i class="bx bx-chevron-right"></i></a>
+            </div>
+          </div>
+          <div class="col-xl-7 d-flex align-items-stretch">
+            <div class="icon-boxes d-flex flex-column justify-content-center">
+              <div class="row">
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+                  <i class="bx bx-receipt"></i>
+                  <h4>Temples</h4>
+                  <p>This place is full of incredible temples like Badrinath, Kedarnath, Yumnotri and Gangotri.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+                  <i class="bx bx-cube-alt"></i>
+                  <h4>Adventure Sports</h4>
+                  <p>It is the most popular adventure sports destination in India. Rafting, Skiing and mountaineering are the most popular ones.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+                  <i class="bx bx-images"></i>
+                  <h4>Climate</h4>
+                  <p>Fed up with the hot summers. Come here and enjoy a climate like no other place.</p>
+                </div>
+                <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+                  <i class="bx bx-shield"></i>
+                  <h4>Culture</h4>
+                  <p>Here, you will get to know the culture of the local people who are devoted Hindus, and are ambassador of the oldest religion.</p>
+                </div>
+              </div>
+            </div><!-- End .content-->
+          </div>
+        </div>
+
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= API Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Get popular blogs</h3>
+          <p> To get popular blogs of Uttarakhand as an API, click below</p>
+          <a class="cta-btn" href="{{url_for('blog_api')}}">GET API</a>
+        </div>
+
+      </div>
+    </section><!-- End API Section -->
+
+    <!-- ======= Images Section ======= -->
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-in" data-aos-delay="100">
+          <h2>Ready to feel happy?</h2>
+          <p>Check out these beautiful yet real images of this marvellous northern state of India. The beauty of this place is only enhanced by the hospitality of its people.</p>
+        </div>
+
+        <div class="row" data-aos="fade-in">
+          <div class="col-lg-12 d-flex justify-content-center">
+<!--            <ul id="portfolio-flters">-->
+<!--              <li data-filter="*" class="filter-active">All</li>-->
+<!--              <li data-filter=".filter-Temples">Temples</li>-->
+<!--              <li data-filter=".filter-TouristPlaces">Tourist Places</li>-->
+<!--              <li data-filter=".filter-AdventureSports">Adventure Sports</li>-->
+<!--              <li data-filter=".filter-Others">Others</li>-->
+<!--            </ul>-->
+          </div>
+        </div>
+
+        <div class="row portfolio-container" data-aos="fade-up">
+          {% for name in data %}
+          <div class="col-lg-4 col-md-6 portfolio-item filter-{{data[name]['category']}}">
+            <div class="portfolio-wrap">
+              <img src="{{data[name]['url']}}" class="img-fluid" alt="">
+              <div class="portfolio-links">
+                <a href="{{data[name]['url']}}" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                <a href="{{data[name]['link']}}" title="More Details"><i class="bx bx-link"></i></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+
+
+
+        </div>
+
+      </div>
+    </section><!-- End Images Section -->
+
+
+
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Have any doubts? To contact me, fill in the form and I will try to reach you back as soon as possible.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="info-box mb-4">
+              <i class="bx bx-map"></i>
+              <h3>Our Address</h3>
+              <p>Road Society Area, Clement Town, Dehradun, Uttarakhand 248002</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-envelope"></i>
+              <h3>Email Us</h3>
+              <p>abhishekrana25112002@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="info-box  mb-4">
+              <i class="bx bx-phone-call"></i>
+              <h3>Call Us</h3>
+              <p>7037632200</p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 ">
+            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3445.761432334949!2d77.99881481428197!3d30.272377914725524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39092bca3fc0ccf3%3A0xd19900de8c24dbee!2sGraphic%20Era%20Hill%20University!5e0!3m2!1sen!2sin!4v1669313771931!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+          </div>
+
+          <div class="col-lg-6">
+            <form action="{{url_for('message')}}" method="post" role="form" class="">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+              </div>
+              <br>
+              <div class="text-center"><button type="submit" class="btn btn-success">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  {% include 'footer.html' %}
+
+  {% include 'bottom.html' %}
+

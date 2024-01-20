@@ -1,0 +1,62 @@
+{
+    "badrinath": {
+        "url": "static/assets/img/31.jpg",
+        "category": "Temples",
+        "link": "https://en.wikipedia.org/wiki/Badrinath"
+    },
+    "rafting": {
+        "url": "static/assets/img/32.jpg",
+        "category": "AdventureSports",
+        "link": "https://www.thrillophilia.com/tours/rafting-day-trips-in-rishikesh"
+    },
+    "kedarnath": {
+        "url": "static/assets/img/33.jpg",
+        "category": "Temples",
+        "link": "https://en.wikipedia.org/wiki/Kedarnath"
+    },
+    "rudranath": {
+        "url": "static/assets/img/34.jpg",
+        "category": "TouristPlaces",
+        "link": "https://en.wikipedia.org/wiki/Rudranath"
+    },
+    "paragliding": {
+        "url": "static/assets/img/35.jpg",
+        "category": "AdventureSports",
+        "link": "https://traveltriangle.com/blog/paragliding-in-uttarakhand/"
+    },
+    "rishikesh": {
+        "url": "static/assets/img/36.webp",
+        "category": "Temples",
+        "link": "https://uttarakhandtourism.gov.in/destination/rishikesh"
+    },
+    "naintal": {
+        "url": "static/assets/img/37.webp",
+        "category": "TouristPlaces",
+        "link": "https://en.wikipedia.org/wiki/Badrinath"
+    },
+    "valley-of-flowers": {
+        "url": "static/assets/img/38.avif",
+        "category": "TouristPlaces",
+        "link": "https://www.euttaranchal.com/tourism/valley-of-flowers.php"
+    },
+    "mountaineering": {
+        "url": "static/assets/img/39.jpg",
+        "category": "AdventureSports",
+        "link": "https://traveltriangle.com/blog/mountaineering-in-uttarakhand/"
+    },
+    "Pahadi": {
+        "url": "static/assets/img/40.jpeg",
+        "category": "Others",
+        "link": "https://www.nainitalcorbetttourism.com/"
+    },
+    "Chamoli": {
+        "url": "static/assets/img/41.jpg",
+        "category": "Others",
+        "link": "https://www.tripadvisor.in/Attractions-g1973310-Activities-Chamoli_Chamoli_District_Uttarakhand.html"
+    },
+    "Auli": {
+        "url": "static/assets/img/42.jpg",
+        "category": "AdventureSports",
+        "link": "https://uttarakhandtourism.gov.in/destination/auli"
+    }
+}
